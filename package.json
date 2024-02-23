@@ -1,6 +1,6 @@
 {
-  "name": "@types/sssh",
-  "version": "0.0.1",
+  "name": "@SSSH-fresh-code/types-sssh",
+  "version": "0.0.2",
   "description": "type of sssh's project",
   "main": "",
   "types": "index.d.ts",
@@ -12,5 +12,8 @@
     "url": "https://github.com/SSSH-fresh-code/types-sssh"
   },
   "author": "limc (daeseong0226@gmail.com)",
-  "license": "ISC"
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }

@@ -4,7 +4,7 @@ SSSH 프로젝트들의 타입을 관리하는 프로젝트입니다.
 # 네이밍 룰
 - Type : T+name
 - InterFace : I+name
-- Enum : name + Enum
+- Enum : name + _ENUM
 - 추가로 Dto에서 사용할 Type, Interface는 T(or I)+name+Dto
 
 추후 네이밍 룰이 추가 될 수 있습니다.

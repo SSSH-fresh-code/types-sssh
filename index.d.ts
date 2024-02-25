@@ -1,11 +1,6 @@
-export enum USER_ROLE_ENUM {
-  GUEST,
-  USER,
-  MANAGER,
-  ADMIN
-}
+export type TUserRole = "GUEST" | "USER" | "MANAGER" | "ADMIN"
 
-type TUsers = {
+export type TUsers = {
   id: string,
   userId: string,
   userPw: string,
@@ -13,7 +8,7 @@ type TUsers = {
   userRole: USER_ROLE_ENUM
 }
 
-interface IUsers {
+export interface IUsers {
   id: string;
   userId: string;
   userPw: string;

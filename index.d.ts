@@ -1,4 +1,9 @@
-import { USER_ROLE_ENUM } from "./index.ts";
+export enum USER_ROLE_ENUM {
+  GUEST,
+  USER,
+  MANAGER,
+  ADMIN
+}
 
 type TUsers = {
   id: string,

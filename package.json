@@ -1,8 +1,8 @@
 {
   "name": "@sssh-fresh-code/types-sssh",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "type of sssh's project",
-  "main": "",
+  "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

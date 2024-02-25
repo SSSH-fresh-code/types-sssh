@@ -1,4 +1,4 @@
-export enum USER_AUTH_ENUM {
+export enum USER_ROLE_ENUM {
   GUEST,
   USER,
   MANAGER,
@@ -10,7 +10,7 @@ type TUsers = {
   userId: string,
   userPw: string,
   userName: string,
-  userAuth: USER_AUTH_ENUM
+  userRole: USER_ROLE_ENUM
 }
 
 interface IUsers {
@@ -18,5 +18,6 @@ interface IUsers {
   userId: string;
   userPw: string;
   userName: string;
-  userAuth: USER_AUTH_ENUM;
+  userRole: USER_ROLE_ENUM
+  ;
 }

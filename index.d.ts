@@ -23,3 +23,6 @@ export type TTokenPayload = {
   iat?: number,
   exp?: number
 }
+
+export type TToken = { type: string } & TTokenPayload
+export type TBasicToken = { type: string, userId: string, userPw: string } 

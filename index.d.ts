@@ -5,7 +5,7 @@ export type TUsers = {
   userId: string,
   userPw: string,
   userName: string,
-  userRole: USER_ROLE_ENUM
+  userRole: TUserRole
 }
 
 export interface IUsers {
@@ -13,6 +13,13 @@ export interface IUsers {
   userId: string;
   userPw: string;
   userName: string;
-  userRole: USER_ROLE_ENUM
-  ;
+  userRole: TUserRole;
+}
+
+export type TTokenPayload = {
+  id: string,
+  userRole: TUserRole,
+  type: string,
+  iat?: number,
+  exp?: number
 }

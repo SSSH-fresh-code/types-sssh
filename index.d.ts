@@ -25,4 +25,13 @@ export type TTokenPayload = {
 }
 
 export type TToken = { type: string } & TTokenPayload
-export type TBasicToken = { type: string, userId: string, userPw: string } 
+export type TBasicToken = { type: string, userId: string, userPw: string }
+
+export type PageInfo = { current: number, last: number, total: number, take: number }
+export type Page<T> = { data: T[], info: PageInfo }
+
+export type SsshError = {
+  message: string,
+  statusCode: number,
+  error: string
+}

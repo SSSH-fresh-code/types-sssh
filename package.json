@@ -1,6 +1,6 @@
 {
   "name": "@sssh-fresh-code/types-sssh",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "type of sssh's project",
   "main": "",
   "types": "index.d.ts",

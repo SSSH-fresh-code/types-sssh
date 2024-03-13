@@ -5,7 +5,7 @@
   "main": "",
   "types": "index.d.ts",
   "scripts": {
-    "publish": "npm version patch --force && npm publish"
+    "publish": "npm publish"
   },
   "repository": {
     "type": "git",

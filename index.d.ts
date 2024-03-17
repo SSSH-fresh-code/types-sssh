@@ -5,7 +5,8 @@ export type TUsers = {
   userId: string,
   userPw: string,
   userName: string,
-  userRole: TUserRole
+  userRole: TUserRole,
+  isCertified: boolean
 }
 
 export interface IUsers {

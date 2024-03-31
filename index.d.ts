@@ -15,6 +15,7 @@ export interface IUsers {
   userPw: string;
   userName: string;
   userRole: TUserRole;
+  isCertified: boolean;
 }
 
 export type TTokenPayload = {
@@ -35,4 +36,16 @@ export type SsshError = {
   message: string,
   statusCode: number,
   error: string
+}
+
+export type TWork = {
+  userUuid: string;
+  baseDate: string;
+  offTime: Date;
+}
+
+export interface IWork {
+  userUuid: string;
+  baseDate: string;
+  offTime: Date;
 }

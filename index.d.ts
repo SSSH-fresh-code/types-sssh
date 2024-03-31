@@ -39,13 +39,13 @@ export type SsshError = {
 }
 
 export type TWork = {
-  userUuid: string;
+  user: TUsers;
   baseDate: string;
   offTime: Date;
 }
 
 export interface IWork {
-  userUuid: string;
+  user: TUsers;
   baseDate: string;
   offTime: Date;
 }

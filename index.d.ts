@@ -53,3 +53,21 @@ export interface IWork {
   workDetail: string;
   offTime: Date;
 }
+
+export type TAlarms = {
+  name: string;
+  icon: string;
+  title: string;
+  contents: string;
+  path?: string;
+  userRole: TUserRole;
+}
+
+export interface IAlarms {
+  name: string;
+  icon: string;
+  title: string;
+  contents: string;
+  path?: string;
+  userRole: TUserRole;
+}

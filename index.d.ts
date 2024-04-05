@@ -60,8 +60,9 @@ export type TAlarms = {
   icon: string;
   title: string;
   contents: string;
-  path?: string;
   userRole: TUserRole;
+  path?: string;
+  highlightWord?: string;
 }
 
 export interface IAlarms {

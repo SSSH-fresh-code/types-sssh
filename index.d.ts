@@ -55,7 +55,7 @@ export interface IWork {
 }
 
 export type TAlarms = {
-  id: number;
+  id?: number;
   order: number;
   name: string;
   icon: string;

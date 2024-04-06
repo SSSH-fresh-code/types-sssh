@@ -55,6 +55,7 @@ export interface IWork {
 }
 
 export type TAlarms = {
+  id: number;
   order: number;
   name: string;
   icon: string;
@@ -66,6 +67,7 @@ export type TAlarms = {
 }
 
 export interface IAlarms {
+  id: number;
   order: number;
   name: string;
   icon: string;

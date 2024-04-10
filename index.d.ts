@@ -1,9 +1,14 @@
+export type TAuths = {
+  code: string,
+  description: string
+}
+
 export type TUsers = {
   id: string,
   userId: string,
   userPw: string,
   userName: string,
-  auths: string[],
+  auths: TAuths[],
   isCertified: boolean
 }
 
@@ -12,7 +17,7 @@ export interface IUsers {
   userId: string;
   userPw: string;
   userName: string;
-  auths: string[],
+  auths: TAuths[],
   isCertified: boolean;
 }
 

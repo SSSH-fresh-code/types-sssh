@@ -1,11 +1,9 @@
-export type TUserRole = "GUEST" | "USER" | "MANAGER" | "ADMIN"
-
 export type TUsers = {
   id: string,
   userId: string,
   userPw: string,
   userName: string,
-  userRole: TUserRole,
+  auths: string[],
   isCertified: boolean
 }
 
@@ -14,14 +12,14 @@ export interface IUsers {
   userId: string;
   userPw: string;
   userName: string;
-  userRole: TUserRole;
+  auths: string[],
   isCertified: boolean;
 }
 
 export type TTokenPayload = {
   id: string,
-  userRole: TUserRole,
-  type: string,
+  auths: string[],
+  type: "ACCESS" | "REFRESH",
   iat?: number,
   exp?: number
 }
@@ -61,7 +59,7 @@ export type TAlarms = {
   icon: string;
   title: string;
   contents: string;
-  userRole: TUserRole;
+  auths: string[];
   path?: string;
   highlightWord?: string;
 }
@@ -74,5 +72,5 @@ export interface IAlarms {
   title: string;
   contents: string;
   path?: string;
-  userRole: TUserRole;
+  auths: string[];
 }

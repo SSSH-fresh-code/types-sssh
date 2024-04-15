@@ -64,7 +64,7 @@ export type TAlarms = {
   icon: string;
   title: string;
   contents: string;
-  auths: string[];
+  auths: TAuths[];
   path?: string;
   highlightWord?: string;
 }
@@ -77,5 +77,5 @@ export interface IAlarms {
   title: string;
   contents: string;
   path?: string;
-  auths: string[];
+  auths: TAuths[];
 }

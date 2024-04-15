@@ -1,6 +1,6 @@
 {
   "name": "@sssh-fresh-code/types-sssh",
-  "version": "0.0.35",
+  "version": "0.0.36",
   "description": "type of sssh's project",
   "main": "",
   "types": "index.d.ts",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/SSSH-fresh-code/types-sssh"
+    "url": "git+https://github.com/SSSH-fresh-code/types-sssh.git"
   },
   "author": "limc (daeseong0226@gmail.com)",
   "license": "ISC",

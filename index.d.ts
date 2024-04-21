@@ -80,3 +80,16 @@ export interface IAlarms {
   auths: TAuths[];
 }
 
+export type TMenu = {
+  name: string;
+  icon?: string;
+  link?: string;
+  parentsId?: string;
+}
+
+export type IMenu = {
+  name: string;
+  icon?: string;
+  link?: string;
+  parentsId?: string;
+}

@@ -81,15 +81,19 @@ export interface IAlarms {
 }
 
 export type TMenu = {
+  id?: number;
   name: string;
   icon?: string;
   link?: string;
   parentsId?: string;
+  order: number;
 }
 
 export type IMenu = {
+  id: number;
   name: string;
   icon?: string;
   link?: string;
   parentsId?: string;
+  order: number;
 }

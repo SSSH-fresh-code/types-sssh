@@ -87,7 +87,7 @@ export type TMenu = {
   link?: string;
   parentsId?: number;
   order: number;
-  auths: TAuths[];
+  auths?: TAuths[];
   childMenus?: TMenu[];
 }
 

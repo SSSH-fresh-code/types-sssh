@@ -101,3 +101,51 @@ export type IMenu = {
   auths: TAuths[];
   childMenus?: TMenu[];
 }
+
+export type TTopic = {
+  id: number;
+  name: string;
+}
+
+export interface ITopic {
+  id: number;
+  name: string;
+}
+
+export type TSeries = {
+  id: number;
+  name: string;
+  topic: TTopic;
+}
+
+export interface ISeries {
+  id: number;
+  name: string;
+  topic: TTopic;
+}
+
+export type TTag = {
+  name: string;
+}
+
+export interface ITag {
+  name: string;
+}
+
+export type TPost = {
+  title: string;
+  contents: string;
+  topic: TTopic;
+  series: TSeries;
+  author: TUsers;
+  tags: TTag[];
+}
+
+export interface IPost {
+  title: string;
+  contents: string;
+  topic: TTopic;
+  series: TSeries;
+  author: TUsers;
+  tags: TTag[];
+}

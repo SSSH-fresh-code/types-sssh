@@ -121,12 +121,12 @@ export interface ITopic {
 }
 
 export type TTopic = Pick<ITopic, "id" | "name" | "series" | "posts"> & BaseType
-
 export type TopicItem = Pick<TTopic, "id" | "name"> & {
   seriesCnt: number;
   postsCnt: number;
 }
 export type TopicListItem = Pick<TTopic, "id" | "name" | "createdAt">;
+export type TopicSelectItem = Pick<TTopic, "id" | "name">;
 export type CreateTopicDto = {
   name: string
 }
@@ -151,6 +151,7 @@ export type SeriseListItem = Pick<TSeries, "id" | "name" | "createdAt"> & {
   topic: { name: string };
   postsCnt: number;
 }
+export type SeriesSelectItem = Pick<TSeries, "id" | "name">;
 export type CreateSeriesDto = Pick<TSeries, "name"> & {
   topicId: number;
 }

@@ -149,7 +149,6 @@ export type SeriseItem = Pick<TSeries, "id" | "name" | "topic" | "createdAt"> & 
 }
 export type SeriseListItem = Pick<TSeries, "id" | "name" | "createdAt"> & {
   topic: { name: string };
-  postsCnt: number;
 }
 export type SeriesSelectItem = Pick<TSeries, "id" | "name">;
 export type CreateSeriesDto = Pick<TSeries, "name"> & {

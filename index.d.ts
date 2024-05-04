@@ -1,3 +1,8 @@
+export type BaseType = {
+  createdAt: Date;
+  updatedAt: Date;
+}
+
 export type TAuths = {
   code: string,
   description: string
@@ -102,50 +107,76 @@ export type IMenu = {
   childMenus?: TMenu[];
 }
 
-export type TTopic = {
-  id: number;
-  name: string;
-}
+/**
+ * Blog Types
+ */
 
+
+/** Topic Start */
 export interface ITopic {
   id: number;
   name: string;
+  series?: ISeries[];
+  posts?: IPost[];
 }
 
-export type TSeries = {
-  id: number;
-  name: string;
-  topic: TTopic;
+export type TTopic = Pick<ITopic, "id" | "name" | "series" | "posts"> & BaseType
+
+export type TopicItem = Pick<TTopic, "id" | "name"> & {
+  seriesCnt: number;
+  postsCnt: number;
+}
+export type TopicListItem = Pick<TTopic, "id" | "name" | "createdAt">;
+export type CreateTopicDto = {
+  name: string
 }
 
+
+/** Series Start */
 export interface ISeries {
   id: number;
   name: string;
   topic: TTopic;
+  posts?: IPost[];
+}
+export type TSeries =
+  Pick<ISeries, "id" | "name" | "posts">
+  & BaseType
+  & { topic: TopicListItem }
+
+export type SeriseItem = Pick<TSeries, "id" | "name" | "topic" | "createdAt"> & {
+  postsCnt: number;
+}
+export type SeriseListItem = Pick<TSeries, "id" | "name" | "createdAt"> & {
+  topic: { name: string };
+  postsCnt: number;
+}
+export type CreateSeriesDto = Pick<TSeries, "name"> & {
+  topicId: number;
 }
 
-export type TTag = {
-  name: string;
-}
 
-export interface ITag {
-  name: string;
-}
-
-export type TPost = {
-  title: string;
-  contents: string;
-  topic: TTopic;
-  series: TSeries;
-  author: TUsers;
-  tags: TTag[];
-}
-
+/** Post Start */
 export interface IPost {
+  id: number;
   title: string;
   contents: string;
   topic: TTopic;
-  series: TSeries;
+  series?: TSeries;
   author: TUsers;
-  tags: TTag[];
 }
+export type TPost =
+  Pick<IPost, "id" | "title" | "contents" | "topic" | "series" | "author">
+  & BaseType;
+
+export type PostItem = Pick<TPost, "id" | "title" | "contents" | "createdAt"> & {
+  author: Pick<TUsers, "userName">;
+  series?: Pick<TSeries, "id" | "name">;
+  topic: Pick<TTopic, "id" | "name">;
+}
+export type PostListItem = PostItem;
+export type CreatePostItem = Pick<TPost, "title" | "contents"> & {
+  topicId: number;
+  seriesId?: number;
+}
+export type UpdatePostItem = CreatePostItem & { id: number };

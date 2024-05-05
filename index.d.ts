@@ -154,7 +154,7 @@ export type SeriesSelectItem = Pick<TSeries, "id" | "name">;
 export type CreateSeriesDto = Pick<TSeries, "name"> & {
   topicId: number;
 }
-
+export type UpdateSeriesDto = Pick<TSeries, "id"> & CreateSeriesDto;
 
 /** Post Start */
 export interface IPost {

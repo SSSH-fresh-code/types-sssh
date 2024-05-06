@@ -160,22 +160,21 @@ export type UpdateSeriesDto = Pick<TSeries, "id"> & CreateSeriesDto;
 export interface IPost {
   id: number;
   title: string;
+  description: string;
   contents: string;
   topic: TTopic;
   series?: TSeries;
   author: TUsers;
 }
-export type TPost =
-  Pick<IPost, "id" | "title" | "contents" | "topic" | "series" | "author">
-  & BaseType;
+export type TPost = IPost & BaseType;
 
-export type PostItem = Pick<TPost, "id" | "title" | "contents" | "createdAt"> & {
+export type PostItem = Pick<TPost, "id" | "title" | "description" | "contents" | "createdAt"> & {
   author: Pick<TUsers, "userName">;
   series?: Pick<TSeries, "id" | "name">;
   topic: Pick<TTopic, "id" | "name">;
 }
 export type PostListItem = PostItem;
-export type CreatePostItem = Pick<TPost, "title" | "contents"> & {
+export type CreatePostItem = Pick<TPost, "title" | "contents" | "description"> & {
   topicId: number;
   seriesId?: number;
 }
